@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #55acee;
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-toggle-label {
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                padding: 10px 0;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 60%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+
+            nav ul.show {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 0;
+            }
+
+            .nav-toggle-label {
+                display: block;
+            }
+
+            section, footer {
+                padding: 10px;
+            }
+
+            body {
+                font-size: 14px; /* Adjusted font size for small screens */
+            }
+        }
+
+        /* Main Content styles */
+        main {
+            margin-top: 60px;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Define class for active section */
+        .active-section {
+            transform: translateX(0);
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Resume/CV styles */
+        a {
+            color: #55acee;
+        }
+
+        /* Skills styles */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills-list li {
+            background-color: #55acee;
+            color: #fff;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        /* FAQ styles */
+        .faq {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            color: #55acee;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 5px;
+        }
+
+        /* Contact styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Name - Personal Website</title>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#resume">Resume/CV</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Homepage Section -->
+        <section id="home" class="active-section">
+            <h1>Hi! My name is JB Naigan</h1>
+        
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, I'm JB Naigan, a passionate Information Technology student based in Manila. As the eldest in my family, I balance my studies with family responsibilities, considering that my parents reside in Visayas. I'm also a pet lover, particularly fond of dogs, and I enjoy spending my free time playing digital games and watching movies.</p>
+            <p>Currently, I am pursuing a degree in BSIT-MI at National University Fairview. Coding is one of my major interests.</p>
+            <p>Below is my photo:</p>
+            <img src="IMG_0170.JPG" alt="Your Photo" style="width: 300px; max-width: 100%;">
+        </section>
+        
+        
+        <!-- Resume/CV Section -->
+        <section id="resume">
+            <h2>Resume/CV</h2>
+            <p>Below is a summary of my professional experience, education, skills, and achievements. You can also view my resume directly:</p>
+            
+            <!-- Provide a permanent link to your PDF -->
+            <a href="JB-NAIGAN-RESUME.pdf" target="_blank">View Resume</a>
+        
+            <!-- Optionally, you can still provide a link to download the PDF -->
+            <p>Download the PDF version of my resume: <a href="JB-NAIGAN-RESUME.pdf" download>Download Resume</a></p>
+        </section>
+        
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Computer skills</li>
+                <li>Time management skills</li>
+                <li>Team Collaboration</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+
+      
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email, phone, or connect with me on social media:</p>
+            <ul>
+                <li>Email: <a href="mailto:jbnaigan7@gmail.com">jbnaigan7@gmail.com</a></li>
+                <li>Phone: <a href="tel:+639282213370">0928-221-3370</a></li>
+                <li>Facebook: <a href="https://www.facebook.com/naigan.jb.0504">Naigan JB</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Add your footer content, such as testimonials, services, achievements, links to social media, newsletter signup, media, privacy policy, terms of service, accessibility, and responsive design sections -->
+    </footer>
+
+    <!-- Add your JavaScript for smooth scrolling or other functionality -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('nav ul');
+
+        navToggle.addEventListener('change', function () {
+            navList.classList.toggle('show', this.checked);
+        });
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                // Remove the 'active-section' class from all sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('active-section');
+                });
+
+                // Add the 'active-section' class to the target section
+                targetSection.classList.add('active-section');
+
+                // Hide navigation on small screens after clicking
+                if (window.innerWidth <= 600) {
+                    navList.classList.remove('show');
+                    navToggle.checked = false;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
